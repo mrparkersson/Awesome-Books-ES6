@@ -9,19 +9,19 @@ const bookList = document.querySelector('.list_present');
 let localStorageData = JSON.parse(localStorage.getItem('bookData'));
 
 if (localStorageData.length === 0 || localStorageData === null) {
-    localStorageData = [];
+  localStorageData = [];
 }
 const booksBinding = new Books(bookList, localStorageData);
 
 function addBook() {
-    const title = titleInput.value;
-    const author = authorInput.value;
-    booksBinding.add(title, author);
-    addForm.reset();
+  const title = titleInput.value;
+  const author = authorInput.value;
+  booksBinding.add(title, author);
+  addForm.reset();
 }
 
 function removeBook(bookId) {
-   booksBinding.remove(bookId);
+  booksBinding.remove(bookId);
 }
 
 addBookBtn.addEventListener('click', addBook);
