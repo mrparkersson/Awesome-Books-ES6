@@ -13,9 +13,10 @@ class Books {
   static createBookDisplay(book, empty = false) {
     const li = document.createElement('li');
     if (!empty) {
-      li.innerHTML = `<h3> ${book.title} </h3>
-                            <p>by - ${book.author} </p>
-                            <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>`;
+      li.innerHTML = `<p> "${book.title}" by - ${book.author} 
+      <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>
+      </p>`;
+                           
     } else {
       li.innerHTML = '<h3>No books available</h3>';
     }
