@@ -2,7 +2,7 @@
 
 "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. see how to manage data using JavaScript. built with medium-fidelity wireframe for UI.
 
-![screenshot](./images/awesome-books.png)
+![screenshot](assets/images/awesome-books.png)
 
 ## Built With
 
