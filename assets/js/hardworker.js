@@ -12,19 +12,22 @@ function addBook() {
 
   if (titleValue !== '' && authorValue !== '') {
     if (booksData.length === 0) {
-      bookList.innerHTML = '';
+        bookList.innerHTML = '';
     }
-
+    
     const bookId = Math.random().toString(36).slice(2);
-    booksData.unshift({
-      id: bookId,
-      title: titleValue,
-      author: authorValue,
-    });
+    booksData.unshift(
+        {
+            id: bookId,
+            title: titleValue,
+            author: authorValue,
+        }
+    );
+
     localStorage.setItem('bookData', JSON.stringify(booksData));
     addForm.reset();
 
-    bookList.innerHTML = ` <li>
+    bookList.innerHTML = `<li>
                             <h3> ${titleValue} </h3>
                             <p>by - ${authorValue} </p>
                             <input type="button" value="Remove" id="${bookId}" class="removeBook" onClick="removeBook('${bookId}')"/>
@@ -37,7 +40,7 @@ addBookBtn.addEventListener('click', addBook);
 function removeBook(bookId) {
   booksData = booksData.filter((books) => books.id !== bookId);
   localStorage.setItem('bookData', JSON.stringify(booksData));
-  // readBookData();
+  readBookData();
 }
 
 function buildBookLists(book) {
@@ -48,3 +51,29 @@ function buildBookLists(book) {
                     </li>`;
   return bookData;
 }
+
+function readBookData() {
+    let booksBuild = '';
+    if (booksData.length > 0) {
+        booksData.forEach((books) => {
+            booksBuild += buildBookLists(books);
+        });
+    } else {
+        booksBuild = `<li><h3>No books available yet!</h3></li>`;
+    }
+    
+    bookList.innerHTML = booksBuild;
+}
+
+
+//Fetch data from localstorage
+
+const localStorageData = JSON.parse(localStorage.getItem('bookData'));
+function getLocalStorageData() {
+    if (localStorageData !== null) {
+        booksData = localStorageData;
+        readBookData();
+    }
+}
+
+window.onresize = getLocalStorageData();
