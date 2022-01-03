@@ -12,16 +12,16 @@ function addBook() {
 
   if (titleValue !== '' && authorValue !== '') {
     if (booksData.length === 0) {
-        bookList.innerHTML = '';
+      bookList.innerHTML = '';
     }
-    
+
     const bookId = Math.random().toString(36).slice(2);
     booksData.unshift(
-        {
-            id: bookId,
-            title: titleValue,
-            author: authorValue,
-        }
+      {
+        id: bookId,
+        title: titleValue,
+        author: authorValue,
+      },
     );
 
     localStorage.setItem('bookData', JSON.stringify(booksData));
@@ -37,43 +37,41 @@ function addBook() {
 
 addBookBtn.addEventListener('click', addBook);
 
+function buildBookLists(book) {
+  const bookData = `<li>
+                          <h3> ${book.title} </h3>
+                          <p>by - ${book.author} </p>
+                          <input type="button" value="Remove" id="${book.id}" onClick="removeBook('${book.id}')"/>
+                      </li>`;
+  return bookData;
+}
+
+function readBookData() {
+  let booksBuild = '';
+  if (booksData.length > 0) {
+    booksData.forEach((books) => {
+      booksBuild += buildBookLists(books);
+    });
+  } else {
+    booksBuild = '<li><h3>No books available yet!</h3></li>';
+  }
+
+  bookList.innerHTML = booksBuild;
+}
+
 function removeBook(bookId) {
   booksData = booksData.filter((books) => books.id !== bookId);
   localStorage.setItem('bookData', JSON.stringify(booksData));
   readBookData();
 }
-
-function buildBookLists(book) {
-  const bookData = `<li>
-                        <h3> ${book.title} </h3>
-                        <p>by - ${book.author} </p>
-                        <input type="button" value="Remove" id="${book.id}" onClick="removeBook('${book.id}')"/>
-                    </li>`;
-  return bookData;
-}
-
-function readBookData() {
-    let booksBuild = '';
-    if (booksData.length > 0) {
-        booksData.forEach((books) => {
-            booksBuild += buildBookLists(books);
-        });
-    } else {
-        booksBuild = `<li><h3>No books available yet!</h3></li>`;
-    }
-    
-    bookList.innerHTML = booksBuild;
-}
-
-
-//Fetch data from localstorage
+// Fetch data from localstorage
 
 const localStorageData = JSON.parse(localStorage.getItem('bookData'));
 function getLocalStorageData() {
-    if (localStorageData !== null) {
-        booksData = localStorageData;
-        readBookData();
-    }
+  if (localStorageData !== null) {
+    booksData = localStorageData;
+    readBookData();
+  }
 }
 
 window.onresize = getLocalStorageData();
