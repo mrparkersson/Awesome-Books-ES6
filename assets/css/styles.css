@@ -12,7 +12,7 @@ li {
   border-bottom: solid 1px grey;
 }
 
-.book_list {
+.list_present {
   max-height: 400px;
   width: 400px;
   overflow-x: scroll;
