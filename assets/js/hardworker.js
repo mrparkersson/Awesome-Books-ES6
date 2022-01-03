@@ -32,7 +32,7 @@ function addBook() {
                             <p>by - ${authorValue} </p>
                             <input type="button" value="Remove" id="${bookId}" class="removeBook" onClick="removeBook('${bookId}')"/>
                         </li>${bookList.innerHTML}`;
-	}
+  }
 }
 
 addBookBtn.addEventListener('click', addBook);
