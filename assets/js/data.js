@@ -16,7 +16,6 @@ class Books {
       li.innerHTML = `<p> "${book.title}" by - ${book.author} 
       <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>
       </p>`;
-                           
     } else {
       li.innerHTML = '<h3>No books available</h3>';
     }
