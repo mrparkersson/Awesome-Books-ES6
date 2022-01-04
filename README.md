@@ -31,7 +31,7 @@ Run the command below from the Terminal:
 
 - Location: Nigeria
 - GitHub: [@clintonjosephs](https://github.com/clintonjosephs)
-- Twitter: [@clintonmbonu\_](https://twitter.com/clintonmbonu_)
+- Twitter: [@clintonmbonu_](https://twitter.com/clintonmbonu_)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/clinton-mbonu)
 
 👤 **Atugonza Joel**
@@ -39,6 +39,12 @@ Run the command below from the Terminal:
 - Location: Uganda
 - GitHub: [@billionsjoel](https://github.com/billionsjoel)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/billionsjoel)
+
+👤 **Parker Prince Amo**
+
+- Location: Ghana
+- GitHub: [@mrparkerson](https://github.com/mrparkersson)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/amopp/)
 
 ## 🤝 Contributing
 
