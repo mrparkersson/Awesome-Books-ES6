@@ -19,6 +19,10 @@ li {
   font-size: 17px;
 }
 
+.nav-bar ul li {
+  margin: 2px;
+}
+
 .list_present li:nth-child(odd) {
   background: #d3d3d3;
 }
@@ -67,7 +71,7 @@ li {
 }
 
 .wrapText {
-  width:400px;
+  width: 400px;
   word-break: break-all;
 }
 
@@ -101,18 +105,13 @@ footer {
   color: black;
 }
 
-.nav-bar ul li {
-  margin: 2px;
-}
-
 .nav-bar ul li:nth-child(2) {
-  border-right : solid 2px black;
+  border-right: solid 2px black;
 }
 
 .nav-bar ul li:nth-child(3) {
-  border-right : solid 2px black;
+  border-right: solid 2px black;
 }
-
 
 .appname {
   flex: 5;
@@ -129,6 +128,7 @@ footer {
   text-align: center;
 }
 
-.contactSection, .addBookSection {
+.contactSection,
+.addBookSection {
   display: none;
 }

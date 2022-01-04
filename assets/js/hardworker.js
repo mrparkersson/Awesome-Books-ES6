@@ -7,19 +7,17 @@ const addBookBtn = document.querySelector('#add_book');
 const addForm = document.querySelector('.addBookForm');
 const bookList = document.querySelector('.list_present');
 
-/*Navigation controls */
-const listLink = document.querySelector(".list");
-const addLink = document.querySelector(".add");
-const contactLink = document.querySelector(".contact");
+/* Navigation controls */
+const listLink = document.querySelector('.list');
+const addLink = document.querySelector('.add');
+const contactLink = document.querySelector('.contact');
 
-const listSection = document.querySelector(".bookListSection");
-const addSection = document.querySelector(".addBookSection");
-const contactSection = document.querySelector(".contactSection");
-/*Navigation controls end */
-
+const listSection = document.querySelector('.bookListSection');
+const addSection = document.querySelector('.addBookSection');
+const contactSection = document.querySelector('.contactSection');
+/* Navigation controls end */
 
 const dateContainer = document.querySelector('.todaysDate');
-
 
 let localStorageData = JSON.parse(localStorage.getItem('bookData'));
 
@@ -31,7 +29,7 @@ const booksBinding = new Books(bookList, localStorageData);
 function addBook() {
   const title = titleInput.value;
   const author = authorInput.value;
-  if (title !== "" && author !== "") {
+  if (title !== '' && author !== '') {
     booksBinding.add(title, author);
     addForm.reset();
   }
@@ -44,6 +42,3 @@ function removeBook(bookId) {
 addBookBtn.addEventListener('click', addBook);
 
 window.onresize = booksBinding.updateUI();
-
-
-
