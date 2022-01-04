@@ -13,7 +13,7 @@ class Books {
   static createBookDisplay(book, empty = false) {
     const li = document.createElement('li');
     if (!empty) {
-      li.innerHTML = `<p> "${book.title}" by - ${book.author} 
+      li.innerHTML = `<p><span class="wrapText"> "${book.title}" by - <i><b>${book.author}</b></i> </span>
       <input type="button" value="Remove" id="${book.id}" class="removeBook" onClick="removeBook('${book.id}')"/>
       </p>`;
     } else {

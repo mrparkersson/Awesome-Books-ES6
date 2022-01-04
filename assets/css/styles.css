@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -10,7 +16,7 @@ h1 {
 li {
   list-style: none;
   padding: 5px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .list_present li:nth-child(odd) {
@@ -19,7 +25,7 @@ li {
 
 .list_present {
   max-height: 500px;
-  width: 900px;
+  width: 600px;
   overflow-x: scroll;
   border: solid;
   margin: 0 auto;
@@ -58,4 +64,71 @@ li {
   width: 50px;
   box-shadow: 5px 5px;
   margin-right: 0;
+}
+
+.wrapText {
+  width:400px;
+  word-break: break-all;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  border: solid 2px black;
+  padding: 10px;
+  position: relative;
+}
+
+.wrapper {
+  border: solid 2px black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar ul li {
+  margin: 2px;
+}
+
+.nav-bar ul li:nth-child(2) {
+  border-right : solid 2px black;
+}
+
+.nav-bar ul li:nth-child(3) {
+  border-right : solid 2px black;
+}
+
+
+.appname {
+  flex: 5;
+}
+
+.todaysDate {
+  text-align: right;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.contactSection {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contactSection, .addBookSection {
+  display: none;
 }
