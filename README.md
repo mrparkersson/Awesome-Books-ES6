@@ -2,7 +2,7 @@
 
 "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. see how to manage data using JavaScript. built with medium-fidelity wireframe for UI.
 
-![screenshot](assets/images/awesome-books.png)
+![screenshot](assets/images/awesome-book-refactor.png)
 
 ## Built With
 
@@ -21,11 +21,9 @@ Run the command below from the Terminal:
 
       git clone <URL> in your terminal
 
-	  cd awesome-books
+      cd awesome-books
 
-	  start index.html
-
-
+      start index.html
 
 ## Authors
 
@@ -42,6 +40,11 @@ Run the command below from the Terminal:
 - GitHub: [@billionsjoel](https://github.com/billionsjoel)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/billionsjoel)
 
+👤 **Parker Prince Amo**
+
+- Location: Ghana
+- GitHub: [@mrparkerson](https://github.com/mrparkersson)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/amopp/)
 
 ## 🤝 Contributing
 

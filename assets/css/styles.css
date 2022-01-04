@@ -1,19 +1,61 @@
 ul {
-  padding: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
 }
 
 li {
   list-style: none;
-  margin: 10px;
-  padding-bottom: 10px;
+  padding: 5px;
+  font-size: 20px;
 }
 
-.list_present li {
-  border-bottom: solid 1px grey;
+.list_present li:nth-child(odd) {
+  background: #d3d3d3;
 }
 
 .list_present {
-  max-height: 400px;
-  width: 400px;
+  max-height: 500px;
+  width: 900px;
   overflow-x: scroll;
+  border: solid;
+  margin: 0 auto;
+}
+
+.removeBook {
+  margin-right: 5px;
+  float: right;
+  height: 25px;
+  box-shadow: 5px 5px;
+}
+
+.divider {
+  width: 200px;
+  border: solid;
+  margin: 30px auto;
+}
+
+.addBookForm {
+  text-align: center;
+}
+
+.addBookForm input[type=text] {
+  width: 300px;
+  border: solid 2px;
+  height: 30px;
+}
+
+.addBookForm ul {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.addBookForm input[type=button] {
+  float: right;
+  width: 50px;
+  box-shadow: 5px 5px;
+  margin-right: 0;
 }
