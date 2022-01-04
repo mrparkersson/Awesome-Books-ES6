@@ -8,7 +8,7 @@ const addForm = document.querySelector('.addBookForm');
 const bookList = document.querySelector('.list_present');
 let localStorageData = JSON.parse(localStorage.getItem('bookData'));
 
-if (localStorageData.length === 0 || localStorageData === null) {
+if (localStorageData === null) {
   localStorageData = [];
 }
 const booksBinding = new Books(bookList, localStorageData);
