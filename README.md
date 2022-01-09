@@ -12,6 +12,8 @@
 - HTML&CSS Linter
 - Git
 
+[LIVE DEMO LINK](https://clintonjosephs.github.io/awesome-books/)
+
 ## Get Started
 
 Please get your browser update.

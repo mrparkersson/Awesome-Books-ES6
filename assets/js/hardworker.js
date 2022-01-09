@@ -6,6 +6,7 @@ const authorInput = document.querySelector('#book_author');
 const addBookBtn = document.querySelector('#add_book');
 const addForm = document.querySelector('.addBookForm');
 const bookList = document.querySelector('.list_present');
+const msg = document.querySelector('.msg');
 
 /* Navigation controls */
 const listLink = document.querySelector('.list');
@@ -31,6 +32,10 @@ function addBook() {
   const author = authorInput.value;
   if (title !== '' && author !== '') {
     booksBinding.add(title, author);
+    msg.style.display = "block";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 2000);
     addForm.reset();
   }
 }
